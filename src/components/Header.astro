@@ -1,5 +1,6 @@
 ---
-import { LucideGithub } from "lucide-vue-next";
+import { LucideGithub, LucideMail } from "lucide-vue-next";
+import { DiscordIcon, GitHubIcon } from "vue3-simple-icons";
 ---
 
 <div class="h-[76px]"></div>
@@ -10,13 +11,34 @@ import { LucideGithub } from "lucide-vue-next";
                 DACJAN
             </a>
         </li>
-        <li>
+        <li class="flex gap-2">
+            <a
+                href="mailto:dac.gapinski@gmail.com"
+                class="flex rounded-md p-2 bg-white border-2 shadow-neobrutalism mr-1 base-animation button-active"
+            >
+                <LucideMail />
+            </a>
+            <button
+                id="discord"
+                class="flex rounded-md p-2 bg-white border-2 shadow-neobrutalism mr-1 base-animation button-active cursor-pointer font-body"
+            >
+                <DiscordIcon />
+            </button>
             <a
                 href="https://github.com/kurwjan"
                 class="flex rounded-md p-2 bg-white border-2 shadow-neobrutalism mr-1 base-animation button-active"
             >
-                <LucideGithub />
+                <GitHubIcon />
             </a>
         </li>
     </ul>
 </nav>
+
+<script>
+    const button = document.getElementById("discord")!;
+
+    button.addEventListener("click", () => {
+        navigator.clipboard.writeText("kurwjan");
+        button.innerHTML = "Kopiert!";
+    });
+</script>
