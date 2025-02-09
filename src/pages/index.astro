@@ -5,10 +5,16 @@ import DVD from "../components/DVD.astro";
 import Layout from "../layouts/Layout.astro";
 
 import LanisMobile from "../assets/lanis-mobile.png";
-import OHS from "../assets/ohs.jpg";
+import OHS from "../assets/ohs.png";
 import November from "../assets/november.png";
 import Github from "../assets/github.png";
-import { LucideGlobe, LucideUser } from "lucide-vue-next";
+import {
+    LucideApple,
+    LucideBot,
+    LucideGlobe,
+    LucideUser,
+    LucideCode,
+} from "lucide-vue-next";
 ---
 
 <Layout>
@@ -23,56 +29,104 @@ import { LucideGlobe, LucideUser } from "lucide-vue-next";
             </p>
             <div class="flex flex-col gap-4 max-w-160 mx-4">
                 <div
-                    class="p-4 bg-white border-2 rounded-md shadow-neobrutalism flex flex-col gap-2"
+                    class="p-4 bg-white border-2 rounded-md shadow-neobrutalism flex flex-col gap-4"
                 >
-                    <div class="flex items-center gap-2">
-                        <Image
-                            src={LanisMobile}
-                            width={80}
-                            height={80}
-                            alt="Ich bin alt"
-                            class="rounded-md max-w-[80px] max-h-[80px] w-auto h-auto"
-                        />
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="flex justify-center items-center border-2 p-2 bg-tertiary w-[90px] h-[90px] rounded-md shadow-neobrutalism"
+                        >
+                            <Image
+                                src={LanisMobile}
+                                width={70}
+                                height={70}
+                                alt="Ich bin alt"
+                                class="max-w-[70px] max-h-[70px] w-auto h-auto"
+                            />
+                        </div>
                         <div class="flex flex-col gap-1">
                             <h3 class="text-2xl font-logo text-start">
                                 Lanis-Mobile
                             </h3>
-                            <a
-                                class="flex items-center gap-1 p-2 bg-light-primary text-sm w-fit rounded-md shadow-neobrutalism"
-                                href="https://lanis-mobile.alessioc42.dev/"
-                            >
-                                <LucideGlobe size={16} />
-                                Website
-                            </a>
+                            <div class="flex gap-2 flex-wrap">
+                                <a
+                                    class="flex items-center gap-1 p-2 border-2 font-body bg-secondary text-sm w-fit rounded-md shadow-neobrutalism base-animation button-active"
+                                    href="https://lanis-mobile.alessioc42.dev/"
+                                >
+                                    <LucideGlobe size={16} />
+                                    Website
+                                </a>
+                                <a
+                                    class="flex items-center gap-1 p-2 border-2 font-body bg-secondary text-sm w-fit rounded-md shadow-neobrutalism base-animation button-active"
+                                    href="https://github.com/lanis-mobile/lanis-mobile"
+                                >
+                                    <LucideCode size={16} />
+                                    Code
+                                </a>
+                                <a
+                                    class="flex items-center gap-1 p-2 border-2 font-body bg-secondary text-sm w-fit rounded-md shadow-neobrutalism base-animation button-active"
+                                    href="https://play.google.com/store/apps/details?id=io.github.alessioc42.sph"
+                                >
+                                    <LucideBot size={16} />
+                                    Android
+                                </a>
+                                <a
+                                    class="flex items-center gap-1 p-2 border-2 font-body bg-secondary text-sm w-fit rounded-md shadow-neobrutalism base-animation button-active"
+                                    href="https://apps.apple.com/de/app/lanis-mobile/id6511247743"
+                                >
+                                    <LucideApple size={16} />
+                                    iOS
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <p class="font-body text-start">
-                        Eine App für das Schulportal Hessen (auch Lanis
-                        genannt). Sie ist in <b>Flutter</b> geschrieben und ist Open-Source.
+                        Eine App für das Schulportal Hessen <i
+                            >(auch Lanis genannt)</i
+                        >
+                        in Zusammenarbeit mit dem staatlichen Schulamt für den Landkreis
+                        Groß-Gerau und den Main-Taunus-Kreis. Sie ist in <b
+                            >Flutter</b
+                        > geschrieben und ist Open-Source.<br /><br />
+
+                        Es unterstützt z. B. Push-Benachrichtigungen, bei einen
+                        neuen Vertretungsplan oder Nachricht.
                     </p>
                 </div>
                 <div
-                    class="p-4 bg-white border-2 rounded-md shadow-neobrutalism flex flex-col gap-2"
+                    class="p-4 bg-white border-2 rounded-md shadow-neobrutalism flex flex-col gap-4"
                 >
-                    <div class="flex items-center gap-2">
-                        <Image
-                            src={OHS}
-                            width={80}
-                            height={80}
-                            alt="Ich bin alt"
-                            class="rounded-md max-w-[80px] max-h-[80px] w-auto h-auto"
-                        />
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="flex justify-center items-center border-2 p-2 bg-tertiary w-[90px] h-[90px] rounded-md shadow-neobrutalism"
+                        >
+                            <Image
+                                src={OHS}
+                                width={70}
+                                height={70}
+                                alt="Ich bin alt"
+                                class="max-w-[70px] max-h-[70px] w-auto h-auto"
+                            />
+                        </div>
                         <div class="flex flex-col gap-1">
                             <h3 class="text-2xl font-logo text-start">
                                 OHS Zukunftschancen
                             </h3>
-                            <a
-                                class="flex items-center gap-1 p-2 bg-light-primary text-sm w-fit rounded-md shadow-neobrutalism"
-                                href="https://ohszukunftschancen.de/"
-                            >
-                                <LucideGlobe size={16} />
-                                Website
-                            </a>
+                            <div class="flex gap-2 flex-wrap">
+                                <a
+                                    class="flex items-center gap-1 p-2 border-2 font-body bg-secondary text-sm w-fit rounded-md shadow-neobrutalism base-animation button-active"
+                                    href="https://ohszukunftschancen.de/"
+                                >
+                                    <LucideGlobe size={16} />
+                                    Website
+                                </a>
+                                <a
+                                    class="flex items-center gap-1 p-2 border-2 font-body bg-secondary text-sm w-fit rounded-md shadow-neobrutalism base-animation button-active"
+                                    href="https://github.com/kurwjan/berufsmesse-ohs2025"
+                                >
+                                    <LucideCode size={16} />
+                                    Code
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <p class="font-body text-start">
@@ -81,27 +135,40 @@ import { LucideGlobe, LucideUser } from "lucide-vue-next";
                     </p>
                 </div>
                 <div
-                    class="p-4 bg-white border-2 rounded-md shadow-neobrutalism flex flex-col gap-2"
+                    class="p-4 bg-white border-2 rounded-md shadow-neobrutalism flex flex-col gap-4"
                 >
-                    <div class="flex items-center gap-2">
-                        <Image
-                            src={November}
-                            width={80}
-                            height={80}
-                            alt="Ich bin alt"
-                            class="rounded-md max-w-[80px] max-h-[80px] w-auto h-auto"
-                        />
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="flex justify-center items-center border-2 p-2 bg-tertiary w-[90px] h-[90px] rounded-md shadow-neobrutalism"
+                        >
+                            <Image
+                                src={November}
+                                width={70}
+                                height={70}
+                                alt="Ich bin alt"
+                                class="max-w-[70px] max-h-[70px] w-auto h-auto"
+                            />
+                        </div>
                         <div class="flex flex-col gap-1">
                             <h3 class="text-2xl font-logo text-start">
                                 9. November Quiz
                             </h3>
-                            <a
-                                class="flex items-center gap-1 p-2 bg-light-primary text-sm w-fit rounded-md shadow-neobrutalism"
-                                href="https://november.dacjan.de/"
-                            >
-                                <LucideGlobe size={16} />
-                                Website
-                            </a>
+                            <div class="flex gap-2 flex-wrap">
+                                <a
+                                    class="flex items-center gap-1 p-2 border-2 font-body bg-secondary text-sm w-fit rounded-md shadow-neobrutalism base-animation button-active"
+                                    href="https://november.dacjan.de/"
+                                >
+                                    <LucideGlobe size={16} />
+                                    Website
+                                </a>
+                                <a
+                                    class="flex items-center gap-1 p-2 border-2 font-body bg-secondary text-sm w-fit rounded-md shadow-neobrutalism base-animation button-active"
+                                    href="https://github.com/kurwjan/9-november-quiz"
+                                >
+                                    <LucideCode size={16} />
+                                    Code
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <p class="font-body text-start">
@@ -112,22 +179,26 @@ import { LucideGlobe, LucideUser } from "lucide-vue-next";
                     </p>
                 </div>
                 <div
-                    class="p-4 bg-white border-2 rounded-md shadow-neobrutalism flex flex-col gap-2"
+                    class="p-4 bg-white border-2 rounded-md shadow-neobrutalism flex flex-col gap-4"
                 >
-                    <div class="flex items-center gap-2">
-                        <Image
-                            src={Github}
-                            width={80}
-                            height={80}
-                            alt="Ich bin alt"
-                            class="rounded-md max-w-[80px] max-h-[80px] w-auto h-auto"
-                        />
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="flex justify-center items-center border-2 p-2 bg-tertiary w-[90px] h-[90px] rounded-md shadow-neobrutalism"
+                        >
+                            <Image
+                                src={Github}
+                                width={70}
+                                height={70}
+                                alt="Ich bin alt"
+                                class="max-w-[70px] max-h-[70px] w-auto h-auto"
+                            />
+                        </div>
                         <div class="flex flex-col gap-1">
                             <h3 class="text-2xl font-logo text-start">
                                 Github
                             </h3>
                             <a
-                                class="flex items-center gap-1 p-2 bg-light-primary text-sm w-fit rounded-md shadow-neobrutalism"
+                                class="flex items-center gap-1 p-2 border-2 font-body bg-secondary text-sm w-fit rounded-md shadow-neobrutalism base-animation button-active"
                                 href="https://github.com/kurwjan"
                             >
                                 <LucideUser size={16} />

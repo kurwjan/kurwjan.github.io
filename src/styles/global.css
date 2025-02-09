@@ -1,9 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-    --color-primary: #018749;
-    --color-light-primary: #32de84;
+    --color-primary: #32de84;
+    --color-secondary: #fadf0a;
+    --color-tertiary: #ee82ee;
     --font-logo: "Anton", "sans-serif";
     --font-body: "Public Sans Variable", "sans-serif";
     --shadow-neobrutalism: 4px 4px 0px black;
+}
+
+@layer components {
+    .base-animation {
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 0.15s;
+    }
+
+    .button-active:hover {
+        transform: translate(4px, 4px);
+        box-shadow: initial !important;
+    }
+
+    .button-active:active {
+        transform: translate(4px, 4px);
+        box-shadow: initial !important;
+    }
 }
