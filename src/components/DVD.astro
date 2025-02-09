@@ -1,4 +1,4 @@
-<div id="container" class="bg-black h-[80vh] relative -z-2 mx-4 rounded-xl">
+<div id="container" class="bg-black h-[75vh] relative -z-2 mx-4 rounded-xl">
 </div>
 
 <script>
@@ -49,12 +49,11 @@
     }
 
     function getLogoURL(): string {
-        // return the default logo if the parameter is not set
-        if (!params.has("logo")) {
-            return "/logos/default.svg";
+        if (document.body.clientWidth < 750) {
+            return "/logos/mobile.svg";
+        } else {
+            return "/logos/display.svg";
         }
-
-        return params.get("logo") || "/logos/default.svg";
     }
 
     function getLogo(url: string): SVGSVGElement {
