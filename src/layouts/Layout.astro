@@ -10,13 +10,35 @@ import "../styles/global.css";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="de">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
+
         <title>Dacjan</title>
+        <meta
+            name="description"
+            content="Eine Seite für den extrem schlechten Entwickler Dacjan."
+        />
+
+        <meta property="og:title" content="Dacjan" />
+        <meta
+            property="og:description"
+            content="Eine Seite für den extrem schlechten Entwickler Dacjan."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.url} />
+        <meta property="og:locale" content="de_DE" />
+        <meta property="og:site_name" content="Dacjan" />
+
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:title" content="Dacjan" />
+        <meta
+            property="twitter:description"
+            content="Eine Seite für den extrem schlechten Entwickler Dacjan."
+        />
 
         <link
             rel="icon"
