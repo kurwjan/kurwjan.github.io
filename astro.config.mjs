@@ -1,5 +1,12 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
+import tailwindcss from "@tailwindcss/vite";
+
+import vue from "@astrojs/vue";
 
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  site: "https://dacjan.de",
+  vite: { plugins: [tailwindcss()] },
+  integrations: [vue()],
+});

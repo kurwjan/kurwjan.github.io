@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #018749;
+    --color-light-primary: #32de84;
+    --font-logo: "Anton", "sans-serif";
+    --font-body: "Public Sans Variable", "sans-serif";
+    --shadow-neobrutalism: 4px 4px 0px black;
+}
