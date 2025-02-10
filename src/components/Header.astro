@@ -22,7 +22,6 @@ import { DiscordIcon, GitHubIcon } from "vue3-simple-icons";
             <button
                 id="discord"
                 class="flex rounded-md p-2 bg-white border-2 shadow-neobrutalism mr-1 base-animation button-active cursor-pointer font-body"
-                target="_blank"
             >
                 <DiscordIcon />
             </button>
@@ -48,9 +47,9 @@ import { DiscordIcon, GitHubIcon } from "vue3-simple-icons";
         addEventListener("scroll", (event) => {
             const nav = document.querySelector("nav")!;
             if (window.scrollY > 0) {
-                nav.classList.add("border-b-2");
+                nav.style.borderBottom = "2px solid #000";
             } else {
-                nav.classList.remove("border-b-2");
+                nav.style.borderBottom = "none";
             }
         });
     }
