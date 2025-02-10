@@ -16,13 +16,17 @@
         transition-duration: 0.15s;
     }
 
-    .button-active:hover {
-        transform: translate(4px, 4px);
-        box-shadow: initial !important;
+    @media (hover: hover) {
+        .button-active:hover {
+            transform: translate(4px, 4px);
+            box-shadow: initial !important;
+        }
     }
 
-    .button-active:active {
-        transform: translate(4px, 4px);
-        box-shadow: initial !important;
+    @media (hover: none) {
+        .button-active:active {
+            transform: translate(4px, 4px);
+            box-shadow: initial !important;
+        }
     }
 }

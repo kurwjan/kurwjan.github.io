@@ -15,18 +15,21 @@ import { DiscordIcon, GitHubIcon } from "vue3-simple-icons";
             <a
                 href="mailto:dac.gapinski@gmail.com"
                 class="flex rounded-md p-2 bg-white border-2 shadow-neobrutalism mr-1 base-animation button-active"
+                target="_blank"
             >
                 <LucideMail />
             </a>
             <button
                 id="discord"
                 class="flex rounded-md p-2 bg-white border-2 shadow-neobrutalism mr-1 base-animation button-active cursor-pointer font-body"
+                target="_blank"
             >
                 <DiscordIcon />
             </button>
             <a
                 href="https://github.com/kurwjan"
                 class="flex rounded-md p-2 bg-white border-2 shadow-neobrutalism mr-1 base-animation button-active"
+                target="_blank"
             >
                 <GitHubIcon />
             </a>
@@ -35,10 +38,24 @@ import { DiscordIcon, GitHubIcon } from "vue3-simple-icons";
 </nav>
 
 <script>
-    const button = document.getElementById("discord")!;
+    function afterSwap() {
+        const button = document.getElementById("discord") as HTMLButtonElement;
+        button.addEventListener("click", () => {
+            navigator.clipboard.writeText("kurwjan");
+            button.innerHTML = "Kopiert!";
+        });
 
-    button.addEventListener("click", () => {
-        navigator.clipboard.writeText("kurwjan");
-        button.innerHTML = "Kopiert!";
-    });
+        addEventListener("scroll", (event) => {
+            const nav = document.querySelector("nav")!;
+            if (window.scrollY > 0) {
+                nav.classList.add("border-b-2");
+            } else {
+                nav.classList.remove("border-b-2");
+            }
+        });
+    }
+
+    document.addEventListener("astro:after-swap", () => afterSwap());
+
+    afterSwap();
 </script>
